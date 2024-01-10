@@ -1,0 +1,29 @@
+@import url('../fonts/general-sans/WEB/css/general-sans.css');
+
+:root {
+  --background: #191148;
+}
+
+* {
+  background-color: var(--background);
+}
+
+.navbar {
+  font-family: 'GeneralSans-Regular';
+  font-size: 16px;
+  display: flex;
+  padding: 10px 110px;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+}
+
+.navbar-link {
+  padding: 18px;
+  text-decoration: none;
+  color: white;
+}
