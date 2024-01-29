@@ -1,8 +1,6 @@
-import React from "react";
-
 const navigationLinks = [
     { key: 0, label: "Home", location: "/" },
-    { key: 1, label: "About", location: "/" },
+    { key: 1, label: "About", location: "/about" },
     { key: 2, label: "Resume", location: "/" },
   ];
 
