@@ -4,7 +4,7 @@
   --primary: #191148;
   --secondary: #E6E5FF;
   --button-primary: #565ADD;
-  --button-primary-hover: #DBDDFF;
+  --button-primary-hover: #C1C2F7;
 }
 
 * {
@@ -31,9 +31,8 @@ h4 {
   color: var(--secondary);
 }
 
-p {
+p, ul, li {
   font-size: 1.125rem;
-  color: var(--secondary);
   line-height: 35px;
 }
 
@@ -44,8 +43,9 @@ p {
 .navbar {
   font-size: 16px;
   display: flex;
-  padding: 30px 110px;
   color: white;
+  position: fixed;
+  width: 100%; 
 }
 
 .navbar-links {
@@ -64,30 +64,51 @@ p {
   color: var(--primary);
   background-color: var(--secondary);
   text-align: center;
-  padding: 30px 0px;
+  padding: 40px 0px;
 }
 
 .footer-icon {
-  font-size: 30px;
+  font-size: 35px;
   color: var(--primary);
   padding: 0px 3px;
 }
 
 .tile {
   display: flex;
+  justify-content: center;
   padding: 0px 190px 100px 190px;
+  max-width: 1070px;
+  margin: 0 auto; //Centers the content
+}
+
+.tile-right {
+    @extend .tile;
+}
+
+.tile-left {
+    @extend .tile;
+    flex-direction: row-reverse;
 }
 
 .tile-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 105px;
-  max-width: 485px;
 
   p {
     padding: 23px 0px 28px 0px;
+    color: var(--secondary);
   }
+}
+
+.tile-text-right {
+  @extend .tile-text;
+  margin-left: 90px
+}
+
+.tile-text-left {
+  @extend .tile-text;
+  margin-right: 90px
 }
 
 .button {

@@ -1,13 +1,20 @@
 import { Button } from './Button';
 
-function WorkTile({ img, title, info, desc }) {
+function WorkTile({ index, img, title, info, desc }) {
+
+    const orientation = () => {
+        if (index % 2 === 0) 
+            return "right";
+
+        return "left";
+    }
 
     return (
-        <div className="tile">
+        <div className={`tile-${orientation()}`}>
             <div className="tile-img">
                 <img src={img} />
             </div>
-            <div className="tile-text">
+            <div className={`tile-text-${orientation()}`}>
                 <h2>{title}</h2>
                 <h4>{info}</h4>
                 <p>{desc}</p>
